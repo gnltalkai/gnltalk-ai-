@@ -1,3 +1,6 @@
+window.onerror = function(msg, url, line) {
+  alert("ERREUR: " + msg + " (ligne " + line + ")");
+};
 const BACKEND_URL = "https://gnltalk-ai-backend.vercel.app";
 
 const params = new URLSearchParams(window.location.search);
