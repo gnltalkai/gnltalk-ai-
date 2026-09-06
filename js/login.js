@@ -1,13 +1,7 @@
-alert("Script chargé");
-
 const loginBtn = document.getElementById("loginBtn");
-alert("Bouton trouvé : " + (loginBtn ? "oui" : "NON - problème ici"));
-
 const errorLabel = document.getElementById("loginError");
 
 loginBtn.onclick = async () => {
-  alert("Bouton cliqué !");
-
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
