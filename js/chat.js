@@ -1,9 +1,9 @@
-  const BACKEND_URL = "https://gnltalk-ai-backend.vercel.app";
+const BACKEND_URL = "https://gnltalk-ai-backend.vercel.app";
+
 const params = new URLSearchParams(window.location.search);
 const charId = params.get("id");
 const character = characters.find(c => c.id === charId);
 
-// Identifiant unique de l'appareil, créé une seule fois et réutilisé
 let deviceId = localStorage.getItem("gnltalk_device_id");
 if (!deviceId) {
   deviceId = "device_" + Date.now() + "_" + Math.random().toString(36).slice(2);
@@ -30,7 +30,6 @@ function addMessage(text, sender) {
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
 
-// Vérifier le compteur au chargement de la page
 async function checkMessages() {
   try {
     const res = await fetch(`${BACKEND_URL}/api/check-messages`, {
@@ -44,6 +43,7 @@ async function checkMessages() {
   } catch (err) {
     messagesLeftLabel.textContent = "Erreur : " + err.message;
   }
+}
 
 async function sendMessage() {
   const text = input.value.trim();
@@ -58,34 +58,22 @@ async function sendMessage() {
   input.value = "";
 
   try {
-    const res = await fetch(`${BACKEND_URL}/api/use-message`, {
+    const useRes = await fetch(`${BACKEND_URL}/api/use-message`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ deviceId })
     });
-    const data = await res.json();
+    const useData = await useRes.json();
 
-    if (res.status === 403) {
+    if (useRes.status === 403) {
       messagesLeft = 0;
       messagesLeftLabel.textContent = "0 messages restants";
       alert("Tu as utilisé tes 20 messages gratuits. Passe Premium pour continuer !");
       return;
     }
 
-    messagesLeft = data.messagesLeft;
+    messagesLeft = useData.messagesLeft;
     messagesLeftLabel.textContent = `${messagesLeft} messages restants`;
 
-    setTimeout(() => {
-      addMessage(`(Réponse simulée de ${character ? character.name : "..."} — l'IA arrivera en PHASE 11)`, "character");
-    }, 600);
-  } catch (err) {
-    alert("Erreur de connexion au serveur, réessaie.");
-  }
-}
-
-sendBtn.onclick = sendMessage;
-input.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") sendMessage();
-});
-
-checkMessages();
+    addMessage("...", "character");
+    const typingBubble = messagesDiv.lastChild;
