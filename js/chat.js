@@ -46,7 +46,6 @@ async function checkMessages() {
 }
 
 async function sendMessage() {
-  alert("sendMessage appelée, texte : " + input.value);
   const text = input.value.trim();
   if (!text) return;
 
