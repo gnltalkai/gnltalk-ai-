@@ -42,9 +42,8 @@ async function checkMessages() {
     messagesLeft = data.messagesLeft;
     messagesLeftLabel.textContent = `${messagesLeft} messages restants`;
   } catch (err) {
-    messagesLeftLabel.textContent = "Erreur de connexion au serveur";
+    messagesLeftLabel.textContent = "Erreur : " + err.message;
   }
-}
 
 async function sendMessage() {
   const text = input.value.trim();
