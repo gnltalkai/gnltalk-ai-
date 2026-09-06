@@ -90,7 +90,7 @@ body {
   background: transparent;
   border: none;
   color: #E4E6EB;
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
   margin-bottom: 30px;
 }
@@ -100,12 +100,14 @@ body {
   height: 88px;
   border-radius: 50%;
   background: #E4E6EB;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #1877F2;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 800;
+  letter-spacing: 1px;
   margin-bottom: 50px;
 }
 
