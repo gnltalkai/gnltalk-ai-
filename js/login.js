@@ -1,3 +1,4 @@
+alert("Le fichier login.js est bien chargé");
 const loginBtn = document.getElementById("loginBtn");
 const errorLabel = document.getElementById("loginError");
 
