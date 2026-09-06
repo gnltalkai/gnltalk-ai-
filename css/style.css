@@ -1,12 +1,12 @@
-{
+* {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #808080 ;
-  color: #FBEAF0;
+  background: #000000;
+  color: #E4E6EB;
 }
 
 .splash {
@@ -20,12 +20,12 @@ body {
 .icons-row {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-bottom: 40px;
+  gap: 64px;
+  margin-bottom: 80px;
 }
 
 .icon {
-  font-size: 60px;
+  font-size: 72px;
 }
 
 .content {
@@ -37,30 +37,29 @@ body {
 }
 
 .name-box {
-  border-radius: 14px;
-  padding: 14px 32px;
+  padding: 0;
   margin-bottom: 28px;
   font-size: 34px;
   font-weight: 700;
-  color: #00008B;
+  color: #1877F2;
   letter-spacing: 0.5px;
 }
 
 .slogan {
-  color: #D2691E;
+  color: #FFFFFF;
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 56px;
 }
 
 .btn-outline {
-  background: #00FF00 ;
-  color:gold;
-  border: 1.5px solid #F4C0D1;
-  padding: 16px 38px;
+  background: transparent;
+  color: #FFFFFF;
+  border: 2px solid #1877F2;
+  padding: 16px 48px;
   border-radius: 28px;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   width: 220px;
 }
@@ -68,5 +67,5 @@ body {
 .link-secondary {
   margin: 28px 0;
   font-size: 14px;
-  color: #C98A9C;
+  color: #B0B3B8;
 }
