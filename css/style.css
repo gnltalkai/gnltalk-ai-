@@ -571,3 +571,46 @@ body {
   font-weight: 700;
   cursor: pointer;
 }
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px 0;
+  background: #18191A;
+  border-top: 0.5px solid #3A3B3C;
+}
+
+.nav-item svg {
+  stroke: #8A8D91;
+}
+
+.nav-item.active svg {
+  stroke: #1877F2;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.empty-text {
+  color: #8A8D91;
+  font-size: 14px;
+  margin: 20px 0 24px;
+}
+
+.history-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
