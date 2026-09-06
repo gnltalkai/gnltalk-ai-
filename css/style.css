@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background:black ;
+  background: #808080 ;
   color: #FBEAF0;
 }
 
@@ -42,19 +42,19 @@ body {
   margin-bottom: 28px;
   font-size: 34px;
   font-weight: 700;
-  color: blue;
+  color: #00008B;
   letter-spacing: 0.5px;
 }
 
 .slogan {
-  color: red;
+  color: #D2691E;
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 56px;
 }
 
 .btn-outline {
-  background: green ;
+  background: #00FF00 ;
   color:gold;
   border: 1.5px solid #F4C0D1;
   padding: 16px 38px;
