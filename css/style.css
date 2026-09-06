@@ -419,3 +419,42 @@ body {
   font-size: 11px;
   margin: 0;
 }
+.premium-page {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.premium-hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.premium-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.premium-title {
+  color: #E4E6EB;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.premium-subtitle {
+  color: #8A8D91;
+  font-size: 14px;
+  margin: 0;
+}
+
+.premium-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.premium-feature {
+  color: #E4E6EB;
+  font-size: 14px;
+}
