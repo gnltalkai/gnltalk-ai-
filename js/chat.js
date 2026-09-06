@@ -11,9 +11,11 @@ if (!deviceId) {
 }
 
 let messagesLeft = 20;
+let currentUserId = null;
 
 if (character) {
-  document.getElementById("chatAvatar").textContent = character.emoji;
+  document.getElementById("chatAvatar").src = character.avatar;
+  document.getElementById("chatAvatar").alt = character.name;
   document.getElementById("chatName").textContent = character.name;
 }
 
@@ -28,6 +30,14 @@ function addMessage(text, sender) {
   bubble.textContent = text;
   messagesDiv.appendChild(bubble);
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+async function loadUser() {
+  if (!window.supabaseClient) return;
+  const { data } = await supabaseClient.auth.getUser();
+  if (data && data.user) {
+    currentUserId = data.user.id;
+  }
 }
 
 async function checkMessages() {
@@ -81,7 +91,7 @@ async function sendMessage() {
     const aiRes = await fetch(`${BACKEND_URL}/api/send-message`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ characterId: charId, message: text })
+      body: JSON.stringify({ characterId: charId, message: text, userId: currentUserId })
     });
     const aiData = await aiRes.json();
 
@@ -96,4 +106,5 @@ input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") sendMessage();
 });
 
+loadUser();
 checkMessages();
