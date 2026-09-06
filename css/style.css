@@ -1,11 +1,11 @@
-{
+* {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #000000;
+  background: white;
   color: #FBEAF0;
 }
 
@@ -54,15 +54,15 @@ body {
 }
 
 .btn-outline {
-  background: green;
-  color:gold ;
-  border: 1px solid #F4C0D1;
-  padding: 16px 20px;
-  border-radius: 0px;
+  background: green blacked;
+  color:gold;
+  border: 1.5px solid #F4C0D1;
+  padding: 16px 48px;
+  border-radius: 28px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  width: 20px;
+  width: 220px;
 }
 
 .link-secondary {
