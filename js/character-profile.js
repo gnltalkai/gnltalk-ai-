@@ -4,7 +4,8 @@ const charId = params.get("id");
 const character = characters.find(c => c.id === charId);
 
 if (character) {
-  document.getElementById("profileAvatar").textContent = character.emoji;
+  document.getElementById("profileAvatar").src = character.avatar;
+  document.getElementById("profileAvatar").alt = character.name;
   document.getElementById("profileName").textContent = character.name;
   document.getElementById("profileTagline").textContent = character.tagline;
   document.getElementById("startChatBtn").onclick = () => {
