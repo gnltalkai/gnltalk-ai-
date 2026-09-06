@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: white;
+  background: ash;
   color: #FBEAF0;
 }
 
@@ -21,11 +21,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 64px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .icon {
-  font-size: 72px;
+  font-size: 70px;
 }
 
 .content {
@@ -59,7 +59,7 @@ body {
   border: 1.5px solid #F4C0D1;
   padding: 16px 38px;
   border-radius: 28px;
-  font-size: 50px;
+  font-size: 25px;
   font-weight: 600;
   cursor: pointer;
   width: 220px;
