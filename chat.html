@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat - GnlTalk AI</title>
   <link rel="stylesheet" href="css/style.css?v=2">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <div class="chat-page">
     <div class="chat-header">
       <button class="btn-back" onclick="location.href='characters.html'">&lt;</button>
-      <div class="chat-avatar" id="chatAvatar"></div>
+      <img class="chat-avatar-img" id="chatAvatar" src="" alt="">
       <div class="chat-header-info">
         <p class="chat-name" id="chatName"></p>
         <p class="chat-status">IA · en ligne</p>
@@ -27,8 +28,9 @@
     </div>
   </div>
 
-  <script src="js/characters.js?v=2"></script>
-<script src="js/chat.js?v=2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/characters.js"></script>
+  <script src="js/chat.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
