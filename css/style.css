@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background:#OOOOOO ;
+  background:black ;
   color: #FBEAF0;
 }
 
@@ -42,12 +42,12 @@ body {
   margin-bottom: 28px;
   font-size: 34px;
   font-weight: 700;
-  color: #4D9F00;
+  color: blue;
   letter-spacing: 0.5px;
 }
 
 .slogan {
-  color: black;
+  color: red;
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 56px;
