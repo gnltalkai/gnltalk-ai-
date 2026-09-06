@@ -73,7 +73,4 @@ async function sendMessage() {
     }
 
     messagesLeft = useData.messagesLeft;
-    messagesLeftLabel.textContent = `${messagesLeft} messages restants`;
-
-    addMessage("...", "character");
-    const typingBubble = messagesDiv.lastChild;
+    messagesLeftLabel.textContent = `${messagesLe
