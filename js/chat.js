@@ -1,5 +1,4 @@
-  const BACKEND_URL = "https://gnltalkai-gnltalk-ai-backend.vercel.app";
-
+  const BACKEND_URL = "https://gnltalk-ai-backend.vercel.app";
 const params = new URLSearchParams(window.location.search);
 const charId = params.get("id");
 const character = characters.find(c => c.id === charId);
