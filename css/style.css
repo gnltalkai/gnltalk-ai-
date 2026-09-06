@@ -1,4 +1,4 @@
-* {
+{
   box-sizing: border-box;
 }
 
@@ -37,7 +37,6 @@ body {
 }
 
 .name-box {
-  border: 2px solid #FFFFFF;
   border-radius: 14px;
   padding: 14px 32px;
   margin-bottom: 28px;
@@ -56,9 +55,9 @@ body {
 
 .btn-outline {
   background: transparent;
-  color: #FBEAF0;
+  color: gold;
   border: 1.5px solid #F4C0D1;
-  padding: 16px 48px;
+  padding: 16px 20px;
   border-radius: 28px;
   font-size: 16px;
   font-weight: 600;
