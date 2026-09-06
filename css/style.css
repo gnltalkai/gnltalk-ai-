@@ -372,3 +372,50 @@ body {
 .profile-menu-item.logout {
   color: #F02849;
 }
+.history-page {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item {
+  background: #242526;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.history-avatar {
+  font-size: 28px;
+}
+
+.history-info {
+  flex: 1;
+}
+
+.history-name {
+  color: #E4E6EB;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0 0 2px;
+}
+
+.history-preview {
+  color: #8A8D91;
+  font-size: 13px;
+  margin: 0;
+}
+
+.history-time {
+  color: #65676B;
+  font-size: 11px;
+  margin: 0;
+}
