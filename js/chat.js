@@ -1,6 +1,3 @@
-window.onerror = function(msg, url, line) {
-  alert("ERREUR: " + msg + " (ligne " + line + ")");
-};
 const BACKEND_URL = "https://gnltalk-ai-backend.vercel.app";
 
 const params = new URLSearchParams(window.location.search);
@@ -49,6 +46,7 @@ async function checkMessages() {
 }
 
 async function sendMessage() {
+  alert("sendMessage appelée, texte : " + input.value);
   const text = input.value.trim();
   if (!text) return;
 
@@ -76,4 +74,27 @@ async function sendMessage() {
     }
 
     messagesLeft = useData.messagesLeft;
-    messagesLeftLabel.textContent = `${messagesLe
+    messagesLeftLabel.textContent = `${messagesLeft} messages restants`;
+
+    addMessage("...", "character");
+    const typingBubble = messagesDiv.lastChild;
+
+    const aiRes = await fetch(`${BACKEND_URL}/api/send-message`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ characterId: charId, message: text })
+    });
+    const aiData = await aiRes.json();
+
+    typingBubble.textContent = aiData.reply || "Désolé, je n'ai pas pu répondre.";
+  } catch (err) {
+    alert("Erreur de connexion au serveur, réessaie.");
+  }
+}
+
+sendBtn.onclick = sendMessage;
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") sendMessage();
+});
+
+checkMessages();
