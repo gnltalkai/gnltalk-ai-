@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - GnlTalk AI</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+  <div class="chat-page">
+    <div class="chat-header">
+      <button class="btn-back" onclick="location.href='characters.html'">&lt;</button>
+      <div class="chat-avatar" id="chatAvatar"></div>
+      <div class="chat-header-info">
+        <p class="chat-name" id="chatName"></p>
+        <p class="chat-status">IA · en ligne</p>
+      </div>
+    </div>
+
+    <p class="messages-left" id="messagesLeft">20 messages restants</p>
+
+    <div class="chat-messages" id="chatMessages"></div>
+
+    <div class="chat-input-bar">
+      <input type="text" id="chatInput" placeholder="Écris un message...">
+      <button id="sendBtn">➤</button>
+    </div>
+  </div>
+
+  <script src="js/characters.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
