@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connexion - GnlTalk AI</title>
   <link rel="stylesheet" href="css/style.css?v=2">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <div class="auth-page">
@@ -15,12 +16,16 @@
       <input type="email" class="input-field" placeholder="E-mail" id="email">
       <input type="password" class="input-field" placeholder="Mot de passe" id="password">
 
-      <button class="btn-primary" onclick="alert('Connexion à venir - PHASE 8')">Se connecter</button>
+      <button class="btn-primary" id="loginBtn">Se connecter</button>
+      <p class="link-secondary" id="loginError"></p>
 
       <p class="link-secondary">Pas encore de compte ?</p>
       <button class="btn-outline" onclick="location.href='signup.html'">S'inscrire</button>
     </div>
   </div>
+
+  <script src="js/supabase-config.js"></script>
+  <script src="js/login.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
