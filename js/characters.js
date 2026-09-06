@@ -11,13 +11,37 @@ const grid = document.getElementById("characterGrid");
 if (grid) {
   characters.forEach(c => {
     const card = document.createElement("div");
-    card.className = "character-card";
+    card.className = "character-row";
     card.onclick = () => location.href = `character-profile.html?id=${c.id}`;
     card.innerHTML = `
       <img class="character-avatar-img" src="${c.avatar}" alt="${c.name}">
-      <p class="character-name">${c.name}</p>
-      <p class="character-tagline">${c.tagline}</p>
+      <div class="character-row-info">
+        <p class="character-name">${c.name}</p>
+        <p class="character-tagline">${c.tagline}</p>
+      </div>
     `;
     grid.appendChild(card);
   });
 }
+
+async function loadWelcome() {
+  const welcomeEl = document.getElementById("welcomeText");
+  const profileCircle = document.getElementById("profileCircle");
+  if (!window.supabaseClient) return;
+
+  const { data } = await supabaseClient.auth.getUser();
+  if (data && data.user) {
+    const username = data.user.user_metadata && data.user.user_metadata.username
+      ? data.user.user_metadata.username
+      : data.user.email;
+
+    if (welcomeEl) {
+      welcomeEl.textContent = `Bienvenue ${username}, choisissez votre discutant`;
+    }
+    if (profileCircle) {
+      profileCircle.textContent = username.charAt(0).toUpperCase();
+    }
+  }
+}
+
+loadWelcome();
