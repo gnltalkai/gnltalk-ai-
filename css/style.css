@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: ash;
+  background: black ;
   color: #FBEAF0;
 }
 
@@ -20,12 +20,12 @@ body {
 .icons-row {
   display: flex;
   justify-content: center;
-  gap: 64px;
+  gap: 60px;
   margin-bottom: 40px;
 }
 
 .icon {
-  font-size: 70px;
+  font-size: 60px;
 }
 
 .content {
@@ -42,7 +42,7 @@ body {
   margin-bottom: 28px;
   font-size: 34px;
   font-weight: 700;
-  color: #4D9FFF;
+  color: #4D9F00;
   letter-spacing: 0.5px;
 }
 
@@ -59,8 +59,8 @@ body {
   border: 1.5px solid #F4C0D1;
   padding: 16px 38px;
   border-radius: 28px;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   cursor: pointer;
   width: 220px;
 }
