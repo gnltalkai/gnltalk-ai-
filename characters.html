@@ -5,17 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personnages - GnlTalk AI</title>
   <link rel="stylesheet" href="css/style.css?v=2">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <div class="characters-page">
     <div class="top-bar">
-      <div class="logo-circle small">GT</div>
-      <p class="page-header">Choisis ton personnage</p>
+      <p class="page-header">GnlTalk AI</p>
+      <div class="logo-circle small" id="profileCircle" onclick="location.href='profile.html'" style="cursor:pointer;"></div>
     </div>
 
-    <div class="character-grid" id="characterGrid"></div>
+    <p class="welcome-text" id="welcomeText">Bienvenue, choisissez votre discutant</p>
+
+    <div class="character-list" id="characterGrid"></div>
   </div>
 
+  <script src="js/supabase-config.js"></script>
   <script src="js/characters.js"></script>
   <script src="js/main.js"></script>
 </body>
