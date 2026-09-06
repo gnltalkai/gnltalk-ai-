@@ -47,10 +47,10 @@ body {
   background: #1877F2;
   color: #FFFFFF;
   border: none;
-  padding: 14px 0;
+  padding: 15px 0;
   width: 100%;
-  max-width: 280px;
-  border-radius: 24px;
+  max-width: 300px;
+  border-radius: 28px;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -67,14 +67,15 @@ body {
   background: transparent;
   color: #4DA1FF;
   border: 1.5px solid #365899;
-  padding: 14px 0;
+  padding: 15px 0;
   width: 100%;
-  max-width: 280px;
-  border-radius: 24px;
-  font-size: 16px;
+  max-width: 300px;
+  border-radius: 28px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
 }
+
 .auth-page {
   min-height: 100vh;
   display: flex;
@@ -89,36 +90,37 @@ body {
   background: transparent;
   border: none;
   color: #E4E6EB;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-.page-title {
-  color: #E4E6EB;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 40px;
+.logo-circle {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #E4E6EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1877F2;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 50px;
 }
 
 .input-field {
   width: 100%;
   max-width: 300px;
-  background: #242526;
-  border: 1px solid #3A3B3C;
-  border-radius: 12px;
-  padding: 14px 16px;
+  background: transparent;
+  border: 1px solid #4A4D51;
+  border-radius: 28px;
+  padding: 16px 20px;
   color: #E4E6EB;
   font-size: 15px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .input-field::placeholder {
   color: #8A8D91;
-}
-
-.link-secondary a {
-  color: #4DA1FF;
-  text-decoration: none;
-  font-weight: 600;
 }
