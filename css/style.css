@@ -458,3 +458,46 @@ body {
   color: #E4E6EB;
   font-size: 14px;
 }
+.settings-page {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.settings-section-title {
+  color: #65676B;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.settings-item {
+  background: #242526;
+  padding: 16px 18px;
+  color: #E4E6EB;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.settings-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-dot {
+  color: #4DA1FF;
+}
+
+.settings-danger {
+  color: #F02849;
+}
