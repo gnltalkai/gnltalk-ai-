@@ -47,14 +47,14 @@ body {
 }
 
 .slogan {
-  color: #FFFFFF;
+  color: black;
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 56px;
 }
 
 .btn-outline {
-  background: green blacked;
+  background: green ;
   color:gold;
   border: 1.5px solid #F4C0D1;
   padding: 16px 48px;
