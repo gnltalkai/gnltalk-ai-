@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paramètres - GnlTalk AI</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+  <div class="settings-page">
+    <div class="top-bar">
+      <button class="btn-back" onclick="location.href='profile.html'">&lt;</button>
+      <p class="page-header">Paramètres</p>
+    </div>
+
+    <p class="settings-section-title">Compte</p>
+    <div class="settings-group">
+      <div class="settings-item">Modifier le profil</div>
+      <div class="settings-item">Changer le mot de passe</div>
+    </div>
+
+    <p class="settings-section-title">Préférences</p>
+    <div class="settings-group">
+      <div class="settings-item settings-toggle">
+        <span>Notifications</span>
+        <span class="toggle-dot">●</span>
+      </div>
+      <div class="settings-item">Langue — Français</div>
+    </div>
+
+    <p class="settings-section-title">Général</p>
+    <div class="settings-group">
+      <div class="settings-item" onclick="location.href='privacy.html'">Confidentialité</div>
+      <div class="settings-item settings-danger" onclick="alert('Suppression de compte à venir')">Supprimer mon compte</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
